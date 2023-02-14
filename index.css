@@ -1,3 +1,46 @@
+* {
+    font-family: "Smythe", cursive;
+    padding: 0;
+}
+
 body {
     margin: 0;
-} 
+    width: 600px;
+}
+
+header {
+    background-image: url("./images/bg img.png");
+    background-size: cover;
+    margin: 0;
+    padding-top: 46px;
+    padding-left: 46px;
+    padding-bottom: 70px;
+    color: #ffff;
+}
+
+h1,
+h3 {
+    padding: 0px;
+    margin: 0px;
+}
+
+h1 {
+    font-size: 39px;
+}
+
+h3 {
+    margin-top: 19px;
+    font-size: 22.42px;
+}
+
+main {
+    border: 2px solid tomato;
+    padding: 22px 46px;
+}
+
+.menuItem {
+    width: 508px;
+    height: 140px;
+    border-bottom: 1px solid #d2d2d2;
+    margin-top: 45px;
+}
