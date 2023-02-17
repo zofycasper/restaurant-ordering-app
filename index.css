@@ -37,7 +37,7 @@ header {
 }
 
 .main-menu {
-    border: 2px solid tomato;
+    /* border: 2px solid tomato; */
     padding: 22px 46px 0 46px;
 }
 
@@ -58,10 +58,10 @@ header {
 }
 
 .item-image {
+    font-size: 70px;
     width: 80px;
     height: 80px;
     grid-area: image;
-    background-size: cover;
 }
 
 .item-title {
@@ -104,6 +104,7 @@ header {
 }
 
 .add-btn {
+    cursor: pointer;
     grid-area: button;
     font-family: "Inter";
     font-style: normal;
@@ -125,17 +126,16 @@ header {
 }
 
 .order {
-    border: 2px solid blue;
+    /* border: 2px solid blue; */
     width: 600px;
     padding: 46px;
     width: 100%;
-    background-color: aqua;
 }
 
 .order-item {
     padding-top: 22px;
     width: 100%;
-    background-color: blanchedalmond;
+    /* background-color: blanchedalmond; */
     display: grid;
     grid-template-columns: auto auto 1fr;
     align-items: baseline;
@@ -147,9 +147,11 @@ header {
 }
 
 .remove-btn {
+    cursor: pointer;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 12px;
     color: #bbbbbb;
+    padding-left: 13px;
 }
 
 .order-title {
@@ -157,7 +159,8 @@ header {
     text-align: center;
 }
 
-.item-price {
+.item-price,
+.total-item-price {
     font-size: 20px;
     margin-left: auto;
 }

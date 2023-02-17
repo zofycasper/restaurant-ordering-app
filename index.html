@@ -17,7 +17,7 @@
             <h1 class="title">Jimmy’s Diner</h1>
             <h3 class="subtitle">The best burgers and pizzas in town.</h3>
         </header>
-        <section class="main-menu">
+        <section class="main-menu" id="main-menu">
             <div class="menu-item">
                 <img
                     src="./images/pizza.png"
@@ -54,19 +54,21 @@
         </section>
         <section class="order">
             <h3 class="order-title">Your Order</h3>
-            <div class="order-item">
-                <h3>Pizza</h3>
-                <p class="remove-btn">remove</p>
-                <p class="item-price">$14</p>
-            </div>
-            <div class="order-item">
-                <h3>Beer</h3>
-                <p class="remove-btn">remove</p>
-                <p class="item-price">$12</p>
+            <div class="order-container" id="order-container">
+                <div class="order-item">
+                    <h3>Pizza</h3>
+                    <p class="remove-btn">remove</p>
+                    <p class="item-price">$14</p>
+                </div>
+                <div class="order-item">
+                    <h3>Beer</h3>
+                    <p class="remove-btn">remove</p>
+                    <p class="item-price">$12</p>
+                </div>
             </div>
             <div class="total-price">
                 <h3>Total price</h3>
-                <p class="item-price">$26</p>
+                <p class="total-item-price" id="total-item-price">$0</p>
             </div>
             <button class="complete-btn">Complete Order</button>
         </section>
