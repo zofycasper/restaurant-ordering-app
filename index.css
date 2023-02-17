@@ -79,7 +79,7 @@ header {
 
 .ingredients {
     grid-area: ingredients;
-
+    padding-top: 8px;
     font-family: "Smythe";
     font-style: normal;
     font-weight: 400;
@@ -92,7 +92,7 @@ header {
 
 .menu-item-price {
     grid-area: price;
-
+    padding-top: 8px;
     font-family: "Smythe";
     font-style: normal;
     font-weight: 400;
