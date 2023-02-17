@@ -1,10 +1,13 @@
 * {
     font-family: "Smythe", cursive;
     padding: 0;
+    margin: 0px;
+    box-sizing: border-box;
 }
 
 body {
-    margin: 0;
+    margin: 0 auto;
+
     width: 600px;
 }
 
@@ -18,29 +21,165 @@ header {
     color: #ffff;
 }
 
-h1,
-h3 {
+.title,
+.subtitle {
     padding: 0px;
     margin: 0px;
 }
 
-h1 {
+.title {
     font-size: 39px;
 }
 
-h3 {
+.subtitle {
     margin-top: 19px;
     font-size: 22.42px;
 }
 
-main {
+.main-menu {
     border: 2px solid tomato;
-    padding: 22px 46px;
+    padding: 22px 46px 0 46px;
 }
 
-.menuItem {
+.menu-item {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-areas:
+        "image title button"
+        "image ingredients button"
+        "image price button";
     width: 508px;
     height: 140px;
     border-bottom: 1px solid #d2d2d2;
     margin-top: 45px;
+    padding: 0px;
+    align-content: start;
+    column-gap: 31px;
+}
+
+.item-image {
+    width: 80px;
+    height: 80px;
+    grid-area: image;
+    background-size: cover;
+}
+
+.item-title {
+    grid-area: title;
+
+    font-family: "Smythe";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 17px;
+    /* identical to box height, or 60% */
+
+    color: #000000;
+}
+
+.ingredients {
+    grid-area: ingredients;
+
+    font-family: "Smythe";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+
+    color: #8b8b8b;
+}
+
+.menu-item-price {
+    grid-area: price;
+
+    font-family: "Smythe";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    /* identical to box height, or 120% */
+
+    color: #000000;
+}
+
+.add-btn {
+    grid-area: button;
+    font-family: "Inter";
+    font-style: normal;
+    display: inline-flex;
+    font-size: 32px;
+    justify-content: center;
+    align-items: center;
+    font-weight: 200;
+    color: #3c3c3c;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    border: 1.5px solid #dedede;
+    background-color: transparent;
+    border-radius: 100%;
+    text-align: center;
+    text-decoration: none;
+    padding-bottom: 3px;
+}
+
+.order {
+    border: 2px solid blue;
+    width: 600px;
+    padding: 46px;
+    width: 100%;
+    background-color: aqua;
+}
+
+.order-item {
+    padding-top: 22px;
+    width: 100%;
+    background-color: blanchedalmond;
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+    align-items: baseline;
+}
+
+.order-item h3,
+.total-price h3 {
+    font-size: 28px;
+}
+
+.remove-btn {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+    color: #bbbbbb;
+}
+
+.order-title {
+    font-size: 28px;
+    text-align: center;
+}
+
+.item-price {
+    font-size: 20px;
+    margin-left: auto;
+}
+
+.total-price {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    margin-top: 31px;
+    border-top: 2px solid #393333;
+    padding-top: 14px;
+}
+
+.complete-btn {
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+    border-radius: 3px;
+    background-color: #16db99;
+    margin-top: 53px;
+    width: 508px;
+    height: 60px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    border: none;
+    color: #ffffff;
 }
