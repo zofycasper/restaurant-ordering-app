@@ -29,10 +29,11 @@ document.addEventListener("click", (e) => {
 });
 
 function handlePay() {
+    const clientName = document.getElementById("input-name").value;
     document.getElementById("card").style.display = "none";
     document.getElementById("order").innerHTML = `
         <div class="finish-container">
-            <p>James! Your order is on its way!</p>
+            <p>${clientName}! Your order is on its way!</p>
         </div>
         `;
 }
