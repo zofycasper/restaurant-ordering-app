@@ -10,11 +10,16 @@ document.addEventListener("click", (e) => {
         handleRemoveClick(e.target.dataset.remove);
     }
     if (e.target.id === "complete-btn") {
-        handleComplete();
+        if (orderArray.length !== 0) {
+            handleComplete();
+        }
     }
 
     if (e.target.id === "pay-btn") {
-        handlePay();
+        const clientName = document.getElementById("input-name").value;
+        if (clientName) {
+            handlePay(clientName);
+        }
     }
 
     const card = document.getElementById("card");
@@ -28,9 +33,9 @@ document.addEventListener("click", (e) => {
     }
 });
 
-function handlePay() {
-    const clientName = document.getElementById("input-name").value;
+function handlePay(clientName) {
     document.getElementById("card").style.display = "none";
+
     document.getElementById("order").innerHTML = `
         <div class="finish-container">
             <p>${clientName}! Your order is on its way!</p>
