@@ -9,7 +9,37 @@ document.addEventListener("click", (e) => {
     if (e.target.dataset.remove) {
         handleRemoveClick(e.target.dataset.remove);
     }
+    if (e.target.id === "complete-btn") {
+        handleComplete();
+    }
+
+    if (e.target.id === "pay-btn") {
+        handlePay();
+    }
+
+    const card = document.getElementById("card");
+
+    if (
+        e.target.id !== "complete-btn" &&
+        e.target !== card &&
+        !card.contains(e.target)
+    ) {
+        card.style.display = "none";
+    }
 });
+
+function handlePay() {
+    document.getElementById("card").style.display = "none";
+    document.getElementById("order").innerHTML = `
+        <div class="finish-container">
+            <p>James! Your order is on its way!</p>
+        </div>
+        `;
+}
+
+function handleComplete() {
+    document.getElementById("card").style.display = "inline";
+}
 
 function getMenuHtml() {
     return menuArray
@@ -47,7 +77,6 @@ function handleAddClick(itemId) {
     console.log(orderArray);
 
     renderOrder();
-
     renderTotalPrice();
 }
 

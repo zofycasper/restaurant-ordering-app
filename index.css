@@ -7,8 +7,12 @@
 
 body {
     margin: 0 auto;
-
+    background-color: #393333;
     width: 600px;
+}
+
+.app-container {
+    position: relative;
 }
 
 header {
@@ -34,6 +38,10 @@ header {
 .subtitle {
     margin-top: 19px;
     font-size: 22.42px;
+}
+
+section {
+    background-color: #f5f5f5;
 }
 
 .main-menu {
@@ -185,4 +193,89 @@ header {
     font-size: 16px;
     border: none;
     color: #ffffff;
+}
+
+.card {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #ffff;
+    width: 524px;
+    height: 542px;
+    border: solid 2px #16db99;
+    margin: auto;
+    text-align: center;
+    padding: 30px 24px;
+    border-radius: 3.88991px;
+    box-shadow: 5px 5px 100px #393333;
+}
+
+.card-title {
+    padding-top: 47px;
+    font-family: "Verdana";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 31px;
+}
+
+.input-container {
+    padding-top: 47px;
+    gap: 23px;
+    display: flex;
+    flex-direction: column;
+    width: 476px;
+}
+
+input,
+.pay-btn {
+    font-family: "Verdana";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 31px;
+    /* or 156% */
+
+    color: #757575;
+    height: 71px;
+}
+
+input {
+    padding-left: 26px;
+}
+
+.pay-btn {
+    background: #16db99;
+    border-radius: 3.88991px;
+    border: none;
+    color: #ffffff;
+    font-family: "Verdana";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 31px;
+}
+
+.finish-container {
+    text-align: center;
+    align-self: center;
+    background: #ecfdf5;
+    border-radius: 3px;
+    width: 504px;
+    margin: auto;
+}
+
+.finish-container p {
+    padding: 50px 0;
+    font-family: "Smythe";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 17px;
+    /* identical to box height, or 52% */
+
+    color: #065f46;
 }
