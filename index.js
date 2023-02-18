@@ -71,7 +71,7 @@ function handleRemoveClick(itemId) {
     const targetItem = orderArray.filter((item) => item.id == itemId)[0];
     const index = orderArray.indexOf(targetItem);
     orderArray.splice(index, 1);
-    console.log(index);
+
     renderOrder();
     renderTotalPrice();
 }
@@ -80,7 +80,6 @@ function handleAddClick(itemId) {
     const targetItem = menuArray.filter((item) => item.id == itemId)[0];
 
     orderArray.push(targetItem);
-    console.log(orderArray);
 
     renderOrder();
     renderTotalPrice();
@@ -120,7 +119,7 @@ function getTotalPrice() {
 
 function renderTotalPrice() {
     const totalPrice = getTotalPrice();
-    console.log(totalPrice);
+
     document.getElementById("total-item-price").innerHTML = `$${totalPrice}`;
 }
 
